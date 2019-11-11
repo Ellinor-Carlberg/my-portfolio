@@ -1,0 +1,47 @@
+body {
+    margin: 0;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 8fr 1fr;
+    grid-template-rows: 1fr 8fr 1fr ;
+    grid-template-areas: 
+    "sidenav-left header sidenav-right" 
+    "sidenav-left main sidenav-right" 
+    "sidenav-left footer sidenav-right";
+    height: 100vh;
+}
+
+.header {
+    grid-area: header;
+    background-color: rgb(247, 234, 255);
+}
+
+.sidenav-left {
+    grid-area: sidenav-left;
+    background-color:rgb(218, 217, 217);
+}
+
+.sidenav-right {
+    grid-area: sidenav-right;
+    background-color:  rgb(218, 217, 217);
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+i {
+    padding-bottom: 1rem;
+}
+
+.main {
+    grid-area: main;
+    background-color: seashell;
+}
+.footer {
+    grid-area: footer;
+    background-color: rgb(198, 198, 198);
+}
