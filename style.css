@@ -11,21 +11,31 @@ body {
     "sidenav-left main sidenav-right" 
     "sidenav-left footer sidenav-right";
     height: 100vh;
+    position:absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.header-background {
+    background-image: url(./photo-1522132423911-84d0c95b5291.jpeg);   
+    background-repeat: no-repeat;
+    height: 100vh;
+    background-size: cover;
 }
 
 .header {
     grid-area: header;
-    background-color: rgb(247, 234, 255);
 }
 
 .sidenav-left {
     grid-area: sidenav-left;
-    background-color:rgb(218, 217, 217);
+    z-index: 1;
 }
 
 .sidenav-right {
     grid-area: sidenav-right;
-    background-color:  rgb(218, 217, 217);
     writing-mode: vertical-rl;
     text-orientation: mixed;
     display: flex;
@@ -39,7 +49,7 @@ i {
 
 .main {
     grid-area: main;
-    background-color: seashell;
+    
 }
 .footer {
     grid-area: footer;
