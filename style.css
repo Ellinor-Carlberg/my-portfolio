@@ -40,12 +40,33 @@ body {
 }
 
 .main {
-    grid-area: main;
+    display:flex;
+    flex-direction: column;
 }
 
+.first-text-main {
+    padding: 5% 10% 0 0;
+}
+
+.image-container {
+    align-self: center;
+    padding: 0 0 0 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.image {
+max-width: 30rem;
+width: 100%;
+height: auto;
+}
+
+.some-text1 {
+padding: 10% 20% 0 0;
+}
 .footer {
     grid-area: footer;
-    background-color: rgb(198, 198, 198);
 }
 
 .name-left {
@@ -80,24 +101,5 @@ i {
     padding-bottom: 1rem;
 }
 
-.flex-websites {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.flex-interests {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.image {
-    max-width: 25rem;
-    width: 100%;
-  height: auto;
-}
 
 
