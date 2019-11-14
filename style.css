@@ -5,39 +5,28 @@ body {
 .grid-container {
     display: grid;
     grid-template-columns: 10% 80% 10%;
-    grid-template-rows: 1fr 8fr 1fr ;
+    grid-template-rows: 1fr 1fr 1fr ;
     grid-template-areas: 
-    "left header right" 
+    "header header header" 
     "left main right" 
     "left footer right";
-    position:absolute; 
-    z-index: 1;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 100vh;
-   
-}
-
-.header-background {
-    background-image: url(./photo-1522132423911-84d0c95b5291.jpeg);   
-    background-repeat: no-repeat;
-    height: 100vh;
-    background-size: cover;
-  /* position: absolute;
-    z-index: 1; */ 
+    height: 100vh; 
 }
 
 .header {
     grid-area: header;
+    background-image: url(./media/background.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
     height: 100vh;
-    align-self: center;
 }
 
-
-.right {
-    grid-area: right;
-    opacity: 0;
+.header h1 {
+    display: block; 
+    bottom: 25%;
+    left: 20%;
+    right:5%;
+    position: absolute;
 }
 
 .left {
@@ -45,39 +34,46 @@ body {
     opacity: 0;
 }
 
-.sidenav-grid {
-    display: grid;
-    grid-template-columns: 10% 80% 10%;
-    grid-template-rows: 1fr;
-    grid-template-areas: 
-    "sidenav-left middle sidenav-right";
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 100vh;
-
+.right {
+    grid-area: right;
+    opacity: 0;
 }
 
-.middle {
-    grid-area: middle;
+.main {
+    grid-area: main;
 }
 
-.sidenav-left {
-grid-area: sidenav-left;
-writing-mode: vertical-rl;
-text-orientation: mixed;
-position: fixed;
-margin-top: 5rem;
-/* z-index: 0; */
+.footer {
+    grid-area: footer;
+    background-color: rgb(198, 198, 198);
 }
+
+.name-left {
+    z-index: -1;
+    position: fixed;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    top: 30%;
+    left: 1%;
+    }
 
 .sidenav-right {
-    grid-area: sidenav-right;
-    writing-mode: vertical-rl;
-    text-orientation: mixed;
+    z-index: 1;
     position: fixed;
-    margin-top: 5rem;
-    /* z-index: 2; */
+    writing-mode: vertical-rl;
+    top: 5%;
+    right: 3%;
+}
+
+.menu-icon {
+display: inline-block;
+border-radius: 50%;
+height: 2rem;
+width: 2rem;
+margin-bottom: 1rem;
+background-color:rgb(255, 198, 168);
+border: 1px solid rgb(255, 234, 180);
+opacity: 0.9;
 }
 
 i {
@@ -105,7 +101,3 @@ i {
 }
 
 
-.footer {
-    grid-area: footer;
-    background-color: rgb(198, 198, 198);
-}
