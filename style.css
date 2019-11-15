@@ -48,6 +48,35 @@ body {
     padding: 5% 10% 0 0;
 }
 
+.round-image {
+    position: relative;
+    height: 15rem;
+    width: 15rem;
+    border-radius: 15rem;
+    border: .1rem solid black;
+    transform: rotateZ(-120deg);
+    transition: transform 1s;
+}
+
+.edge-text {
+    position: absolute;
+    top: -3rem;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.round-image p:nth-child(2) {
+    /* origion: */
+    transform-origin: 0 9.6rem;
+    transform: rotateZ(120deg) translateX(-50%); 
+}
+
+.round-image p:nth-child(3) {
+    /* origion: */
+    transform-origin: 0 9.6rem;
+    transform: rotateZ(240deg) translateX(-50%); 
+}
+
 .image-container {
     align-self: center;
     padding: 0 0 0 20%;
