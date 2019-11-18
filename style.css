@@ -118,7 +118,11 @@ opacity: 0.9;
 .show {
     opacity: 1;
 }
-i {
+
+
+.show img{
+    width: auto;
+    height: 1.2rem;
     padding-bottom: 1rem;
 }
 
