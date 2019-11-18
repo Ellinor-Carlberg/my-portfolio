@@ -104,7 +104,7 @@ body {
     right: 3%;
 }
 
-.menu-icon {
+.dropdown-icon {
 display: inline-block;
 border-radius: 50%;
 height: 2rem;
@@ -115,6 +115,9 @@ border: 1px solid rgb(255, 234, 180);
 opacity: 0.9;
 }
 
+.show {
+    opacity: 1;
+}
 i {
     padding-bottom: 1rem;
 }
