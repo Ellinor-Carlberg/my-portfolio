@@ -1,3 +1,7 @@
+
+* { font-family: 'Fira Sans Condensed', sans-serif;
+}  
+
 body {
     margin: 0;
 }
@@ -21,13 +25,30 @@ body {
     height: 100vh;
 }
 
-.header h1 {
+.header h1{
     display: block; 
     bottom: 25%;
     left: 20%;
     right:5%;
     position: absolute;
+font-size: 3rem;
+font-weight: 400;
+color:black;
 }
+.hello-text {
+   
+    position: absolute;
+    animation: rotate 2s ;
+}
+@keyframes rotate {
+    0% {
+        transform: rotate(180deg);
+    }
+
+    80% {
+        transform: rotate(180deg);
+    }
+  }
 
 .left {
     grid-area: left;
@@ -50,35 +71,6 @@ body {
     padding: 5% 10% 5rem 0;
 }
 
-.round-image {
-    background-image: url(./media/test.jpeg);
-    border: 0.1rem solid black;
-    position: relative;
-    width: 31vh;
-    height: 31vh;
-    border-radius: 100%;
-    transform: rotateZ(-120deg); 
-    /* transition: transform 10s; */
-
-}
-
-
-
-.edge-text {
-    position: absolute;
-    top: -6.5vh;
-    left: 50%;
-    transform: translateX(-50%);
-   transform-origin: 0 19.5vh;
-}
-
-.round-image p:nth-child(2) {
-    transform: rotateZ(120deg) translateX(-50%); 
-}
-
-.round-image p:nth-child(3) {
-    transform: rotateZ(240deg) translateX(-50%);
-}
 
 
 
