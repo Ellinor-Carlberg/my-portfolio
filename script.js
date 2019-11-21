@@ -2,35 +2,12 @@ window.addEventListener('load', loadSite)
 
 function loadSite() {
 
-//rotateText()
-
-
-const startRotateText = document.querySelector('.inner-circle')
-startRotateText.addEventListener('click', rotateTextAroundCircle )
-
+const text = document.querySelector('.headline-about-me')
+text.addEventListener( 'click', showText )
 
 const menu = document.querySelector('.dropdown-icon')
 menu.addEventListener('click', showMenu )
 }
-
-
-function rotateTextAroundCircle() {
-console.log('rotate')
-// Code for Safari
-document.querySelectorAll(".outercircle").style.WebkitTransform = "rotate(20deg)"; 
-// Code for IE9
-document.querySelectorAll(".outercircle").style.msTransform = "rotate(20deg)"; 
-// Standard syntax
-document.querySelectorAll(".outercircle").style.transform = "rotate(20deg)"; 
-  }
-
-
-
-/* function rotateText() {
-    const span = document.querySelector('.hello-text')  
-    span.setAttribute( 'transform','rotate(180deg)')
-    console.log('hej')
-}  */
 
 
 let show
@@ -49,4 +26,16 @@ for(const item of menuItems) {
  }
 
 show = !show
+}
+
+
+function showText() {
+    let hiddenText = document.querySelector('.text-about-me');
+
+        if (hiddenText.classList.contains('hidden')) {
+            hiddenText.classList.remove('hidden');
+          } else {
+            hiddenText.classList.add('hidden');
+
+          }
 }
