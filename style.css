@@ -1,17 +1,18 @@
+* {
+    font-family: 'Fira Sans Condensed', sans-serif;
+    color: black;
+}
 
-* { font-family: 'Fira Sans Condensed', sans-serif;
+body {
     margin: 0;
 }
 
 .grid-container {
     display: grid;
-    grid-template-columns: 10% 80% 10%;
-    grid-template-rows: 1fr 1fr 1fr ;
-    grid-template-areas: 
-    "header header header" 
-    "left main right" 
-    "left footer right";
-    height: 100vh; 
+    grid-template-columns: 10% 75% 15%;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: "header header header" "left main right" "left footer right";
+    height: 100vh;
 }
 
 .header {
@@ -22,30 +23,29 @@
     height: 100vh;
 }
 
-.header h1{
-display: block; 
-bottom: 15%;
-left: 20%;
-right:20%;
-position: absolute;
-font-size: 3rem;
-font-weight: 400;
-color:black;
+.header h1 {
+    display: block;
+    bottom: 15%;
+    left: 20%;
+    right: 20%;
+    position: absolute;
+    font-size: 3rem;
+    font-weight: 400;
 }
 
 .hello-text {
     position: absolute;
-    animation: rotate 2s ;
+    animation: rotate 2s;
 }
+
 @keyframes rotate {
     0% {
         transform: rotate(180deg);
     }
-
     80% {
         transform: rotate(180deg);
     }
-  }
+}
 
 .left {
     grid-area: left;
@@ -57,46 +57,59 @@ color:black;
     opacity: 0;
 }
 
-.main {
-    display:flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+main {
+    grid-area: main;
     font-weight: 300;
     font-size: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-
 .first-text-main {
-    padding: 5% 10% 5rem 0;
+    padding: 10% 0 5rem 0;
 }
 
 .headline-about-me {
-border: 1px solid black;
-width: 8rem;
-border-radius: 50%;
-text-align: center;
-line-height: 1.5rem;
-padding: 3.25rem 0 3.25rem 0;
+    width: 8rem;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 1.5rem;
+    padding: 3.25rem 0 3.25rem 0;
+    margin: 2rem 0 5rem 0;
+    box-shadow: #fff;
+    -webkit-animation: glow 1s ease-in-out infinite alternate;
+    -moz-animation: glow 1s ease-in-out infinite alternate;
+    animation: glow 1s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes glow {
+    from {
+        box-shadow: 0 0 0.5rem white, 0 0 1rem white, 0 0 1.5rem rgb(255, 187, 114), 0 0 2rem rgb(255, 187, 114), 0 0 2.5rem rgb(255, 187, 114), 0 0 3rem rgb(255, 187, 114), 0 0 3.5rem rgb(255, 187, 114);
+    }
+    to {
+        box-shadow: 0 0 1rem white, 0 0 1.5rem rgb(255, 187, 104), 0 0 2rem rgb(255, 187, 104), 0 0 2.5rem rgb(255, 187, 104), 0 0 3rem rgb(255, 187, 104), 0 0 3.5rem rgb(255, 187, 104), 0 0 4rem rgb(255, 187, 104);
+    }
+}
+
+.text-about-me {
+    font-weight: 300;
+    font-size: 1.2rem;
 }
 
 .hidden {
-display: none;
+    display: none;
 }
-
-
-
 
 .footer {
     grid-area: footer;
-    padding-top: 5rem;
+    padding: 5rem 0 3rem 0;
     display: flex;
     flex-direction: column;
-justify-content: center;
-text-align: center;
-font-weight: 300;
+    justify-content: center;
+    text-align: center;
+    font-weight: 300;
     font-size: 1.5rem;
-    
 }
 
 .name-left {
@@ -106,7 +119,7 @@ font-weight: 300;
     text-orientation: upright;
     top: 30%;
     left: 1%;
-    }
+}
 
 .sidenav-right {
     z-index: 1;
@@ -117,25 +130,22 @@ font-weight: 300;
 }
 
 .dropdown-icon {
-display: inline-block;
-border-radius: 50%;
-height: 2rem;
-width: 2rem;
-margin-bottom: 1rem;
-background-color:rgb(255, 198, 168);
-border: 1px solid rgb(255, 234, 180);
-opacity: 0.9;
+    display: inline-block;
+    border-radius: 50%;
+    height: 2rem;
+    width: 2rem;
+    margin-bottom: 1rem;
+    background-color: rgb(255, 198, 168);
+    border: 1px solid rgb(255, 234, 180);
+    opacity: 0.9;
 }
 
 .show {
     opacity: 1;
 }
 
-.show img{
+.show img {
     width: auto;
     height: 1.2rem;
     padding-bottom: 1rem;
 }
-
-
-

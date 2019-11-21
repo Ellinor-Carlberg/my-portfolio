@@ -1,5 +1,8 @@
 
-This is my digital portfolio.
+#Ellinor Carlbergs digital portfolio.
+
+This webpage is my digital portfolio where I present myself and why I choose to study 
+Front End Development.
 
 
 Link to Github repot: 
