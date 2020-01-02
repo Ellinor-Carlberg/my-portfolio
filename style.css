@@ -149,3 +149,27 @@ main {
     height: 1.2rem;
     padding-bottom: 1rem;
 }
+
+
+/* On screens 1025px or less in width, change the position */
+    @media screen and (max-width: 1025px) {
+    .name-left {
+        top: 40%;
+    }
+}
+
+/* On screens 650px or less in width, change the font-size and position */
+    @media screen and (max-width: 650px) {
+    .header h1{
+        left: 10%;
+        right: 30%;
+        font-size: 2rem;
+    }
+}
+
+/* On screens 650px or less in height, change the position */
+    @media screen and (max-height: 650px) {
+    .header h1{
+        top: 25%;
+    }
+}

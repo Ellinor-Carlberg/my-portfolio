@@ -3,10 +3,10 @@ window.addEventListener('load', loadSite)
 function loadSite() {
 
     const text = document.querySelector('.headline-about-me')
-    text.addEventListener('click', showText)
+    text.addEventListener('click', toggleTextVisibility)
 
     const menu = document.querySelector('.dropdown-icon')
-    menu.addEventListener('click', hiddeMenu)
+    menu.addEventListener('click', toggleMenuVisibility)
 }
 
 /**
@@ -14,7 +14,7 @@ function loadSite() {
  * @param {MouseEvent} 
  */
 let show
-function hiddeMenu() {
+function toggleMenuVisibility() {
     if (show) {
         const menuItems = document.querySelectorAll('.show')
         for (const item of menuItems) {
@@ -32,10 +32,10 @@ function hiddeMenu() {
 }
 
 /**
- * a function that hidde and show text on the page.
+ * a function that hidde and show a part of text on the page.
  * @param {MouseEvent} 
  */
-function showText() {
+function toggleTextVisibility() {
     let hiddenText = document.querySelector('.text-about-me');
 
     if (hiddenText.classList.contains('hidden')) {
